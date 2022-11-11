@@ -5,7 +5,9 @@ import { Box } from '@mui/material';
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../services/Service';
-import useLocalStorage from 'react-use-localstorage';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 function Login() {
 
@@ -20,7 +22,10 @@ function Login() {
         token: ""
     })
 
-    const [token, setToken] = useLocalStorage('token');
+const dispatch = useDispatch()
+
+const [token, setToken] = useState('')
+
 
     function updateModel(event: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
@@ -31,6 +36,7 @@ function Login() {
 
     useEffect(() => {
         if (token != '') {
+            dispatch(addToken(token))
             navigate('/home')
         }
     }, [token])
@@ -39,9 +45,27 @@ function Login() {
         event.preventDefault();
         try {
            await login('/usuarios/logar', userLogin, setToken)
-            alert('Usuário logado com sucesso');
+           toast.success('Logged in successfully, welcome!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+        })
         } catch (error) {
-            alert('Dados do usuário inconsistentes. Erro ao logar')
+            toast.error('Incorrect information, please try again', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            })
         }
         await login('/usuarios/logar', userLogin, setToken)
     }
