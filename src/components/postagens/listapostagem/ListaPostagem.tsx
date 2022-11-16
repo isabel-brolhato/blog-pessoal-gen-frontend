@@ -58,7 +58,7 @@ const token = useSelector<TokenState, TokenState['tokens']>(
             <Card variant="outlined">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Postagens
+                  Posts
                 </Typography>
                 <Typography variant="h5" component="h2">
                   {post.titulo}
@@ -67,10 +67,10 @@ const token = useSelector<TokenState, TokenState['tokens']>(
                   {post.texto}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  Postagem feita em: {new Date(Date.parse(post.data)).toLocaleDateString('pt-br')}
+                  Date: {new Date(Date.parse(post.data)).toLocaleDateString('pt-br')}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {post.tema?.descricao}
+                  Topic:{post.tema?.descricao}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -78,15 +78,15 @@ const token = useSelector<TokenState, TokenState['tokens']>(
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
+                      <Button variant="contained" className="marginLeft update-btn" size='small' color="primary" >
+                        Update
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        deletar
+                      <Button variant="contained" size='small' color="secondary" className='delete-btn'>
+                        Delete
                       </Button>
                     </Box>
                   </Link>

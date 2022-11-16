@@ -134,12 +134,12 @@ function CadastroPost() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Create a new post</Typography>
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Title" variant="outlined" name="titulo" margin="normal" fullWidth />
+                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Text" name="texto" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">Topic </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
@@ -154,9 +154,9 @@ function CadastroPost() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary" disabled={tema.id == 0}>
-                        Finalizar
+                    <FormHelperText>Choose an existing topic for your post</FormHelperText>
+                    <Button type="submit" variant="contained" color="primary" disabled={tema.id == 0} className='btn'>
+                        Create
                     </Button>
                 </FormControl>
             </form>

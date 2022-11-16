@@ -16,3 +16,8 @@
 .textos{
    color: white;
 }
+
+.bar{
+    background-color: rgba(218, 176, 189, 0.652) !important;
+    display: block;
+}

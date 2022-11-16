@@ -38,20 +38,20 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h4" align="center" className='titulo'>To all who come to this happy place, <span>welcome!</span></Typography>
+                    
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         <ModalPostagem />
                         </Box>
                         <Link to="/posts" className='text-decorator-none'>
-                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        <Button variant="outlined" className='botao'>See all posts</Button>
                         </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                    <img src="https://images.unsplash.com/photo-1463109598173-3864231fade5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1197&q=80" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

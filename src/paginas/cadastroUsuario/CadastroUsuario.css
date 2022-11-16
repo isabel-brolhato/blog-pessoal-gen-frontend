@@ -1,5 +1,5 @@
 .imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+    background-image: url(https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -13,4 +13,18 @@
 
 .btnCancelar{
     margin-right: 20px !important;
+    border-radius: 30px !important; 
+    background-color: rgba(228, 176, 192, 0.403) !important;
+    color: rgb(67, 65, 65) !important ;
 }
+
+
+.submit-btn{
+    background-color: rgba(169, 214, 218, 0.422) !important;
+    border-radius: 30px !important; 
+    color: rgb(67, 65, 65) !important ;
+}
+
+.bg-color{
+    background-color: rgb(255, 254, 254) ;
+ }

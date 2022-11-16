@@ -1,3 +1,15 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.delete-btn{
+    border-radius: 30px !important; 
+    background-color: rgba(228, 176, 192, 0.403) !important;
+    color: rgb(67, 65, 65) !important ;
+}
+
+.update-btn{
+    background-color: rgba(169, 214, 218, 0.422) !important;
+    border-radius: 30px !important; 
+    color: rgb(67, 65, 65) !important ;
+}

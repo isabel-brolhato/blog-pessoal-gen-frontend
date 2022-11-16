@@ -1,16 +1,38 @@
+
 .textos1{
     font-weight: bold !important;
  }
  
  .imagem{
-     background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+     background-image: url(https://images.unsplash.com/photo-1489367753387-4a80734cbc3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
      background-repeat: no-repeat;
      width: 100vh;
      min-height: 100vh;
      background-size: cover;
      background-position: center;
  }
- 
+
+
  .text-decorator-none{
      text-decoration: none;
+ }
+
+ .box{
+ border-radius: 30px;
+ min-height: 50vh;
+ display:flex;
+ }
+
+ .bg-color{
+    background-color: rgb(248, 243, 243);
+ }
+
+ .smiley{
+    max-height: 30px;
+ }
+
+ .login-btn{
+    background-color: rgba(169, 214, 218, 0.422) !important;
+    border-radius: 30px !important; 
+    color: rgb(67, 65, 65) !important ;
  }
